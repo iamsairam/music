@@ -1,7 +1,7 @@
 import React from 'react';
 import spb from './Images/spb.jpg'
 import './MoblieStyles.css'
-import AdheNuvvu from './Audio/Ade-Neevu.Audio.mp3'
+import AdheNuvvu from './Audio/Ade Neevu-SAIRAM.Audio.mp3'
 function MobileMusicapp(props) {
     return (
         <div>
@@ -18,7 +18,7 @@ function MobileMusicapp(props) {
                 </div>
                 
                 <div className='mt-2'><audio controls>
-            <source src={AdheNuvvu} type="audio/mpeg" />
+                <source src={AdheNuvvu} type="audio/mpeg" />
             Your browser does not support the audio tag.
             </audio></div>
             </div>
