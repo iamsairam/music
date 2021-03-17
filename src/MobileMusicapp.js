@@ -1,11 +1,21 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route, Link} from 'react-router-dom'
-import Newalbum from './Newalbum';
 import loveSongs from './Arraydatalove';
 import joshsongdata from './Arraydatajosh';
 import sadsongdata from './Arraydatasad';
+import devotionalsongdata from './Arraydatadevotional';
+import bgmsongdata from './Arraydatabgm';
+import Classicsongdata from './Arraydataclassics';
+import SPBsongsdata from './Arraydataspb'
+import KVsongsdata from './Arraydatakv'
+import Nagsongsdata from './Arraydatanag'
+import venkysongsdata from './Arraydatavenky';
+import PKsongsdata from './Arraydatapk';
+
 import Album from './Album'
 import Home from './Home';
+import Contact from './Contact';
+import About from './About';
 
 function MobileMusicapp(props) {
     return (
@@ -13,6 +23,8 @@ function MobileMusicapp(props) {
             <Router>
             <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/About" exact component={About} />
+            <Route path="/Contact" exact component={Contact} />
                 
                 <Route path="/LoveSong" exact >
                 <Album songs={loveSongs} />
@@ -27,11 +39,35 @@ function MobileMusicapp(props) {
                 </Route>
                 
                 <Route path="/Devotional" exact>
-                <Album songs={sadsongdata} />
+                <Album songs={devotionalsongdata} />
                 </Route>
 
                 <Route path="/BGM" exact >
-                <Album songs={sadsongdata} />
+                <Album songs={bgmsongdata} />
+                </Route>
+
+                <Route path="/Classic" exact >
+                <Album songs={Classicsongdata} />
+                </Route>
+
+                <Route path="/SPB" exact >
+                <Album songs={SPBsongsdata} />
+                </Route>
+
+                <Route path="/KV" exact >
+                <Album songs={KVsongsdata} />
+                </Route>
+
+                <Route path="/Nag" exact >
+                <Album songs={Nagsongsdata} />
+                </Route>
+
+                <Route path="/Venky" exact >
+                <Album songs={venkysongsdata} />
+                </Route>
+
+                <Route path="/PK" exact >
+                <Album songs={PKsongsdata} />
                 </Route>
                 
             </Switch>

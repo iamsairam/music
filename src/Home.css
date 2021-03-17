@@ -69,7 +69,6 @@ margin-left:5px;
     line-height:2.5;
     color: rgb(0, 0, 0,0.8);
     font-weight:500;
-
 }
 .album-title .title-track-name{
     width: 132px;
@@ -83,4 +82,66 @@ margin-left:5px;
 }   
 .Recommended-section{
     margin-top: 25px;
+}
+.mt-30{
+    margin-top: 30px !important;
+}
+.full-card img{
+    width:100%;
+    height:250px;   
+    box-shadow: 2px 10px 12px 0 rgb(114, 113, 113,0.3) ;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgb(0,0,0,0.25);
+}
+.Recommended-album-title{
+    margin-left:5px;
+    margin-top: 10px;
+}
+.Recommended-album-title div{
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none !important;
+}
+.Recommended-album-title span{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none !important;   
+}
+.full-card{
+    text-decoration: none !important;
+    color: rgb(0, 0, 0,0.8);
+}
+.footer-bar{
+    width: calc(100% - 20px);
+    position: fixed;
+    bottom: -6px;
+    z-index: 9;
+    background-color:#fff;
+    left: 10px;
+    right: 10px;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid rgb(0,0,0,0.1);
+    -webkit-box-shadow: 0px -8px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px -8px 3px rgba(0,0,0,0.25);
+    box-shadow: 0px -8px 3px rgba(0,0,0,0.25);
+}
+.footer-bar-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-icons{
+    display: inline-grid;
+    justify-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0,0.9);
 }

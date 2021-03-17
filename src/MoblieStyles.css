@@ -15,3 +15,65 @@
   vertical-align:middle;
     display: table-cell;
 }
+.contact-page{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contact-page h2{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+.contact-page h3{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  margin-top: -10px;
+}
+.portfoilio-link a{
+  text-decoration: none;
+}
+.portfoilio-link span{
+  text-transform: uppercase;
+}
+.portfoilio-link {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.contact-page img{
+  margin-bottom: 25px;
+}
+.info-table{
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  border-spacing: 0;
+}
+.info-table td{
+  padding:10px;
+}
+.info-table td div{
+  display: grid;
+}
+.info-table td div{
+  line-height: 1.8;
+  text-align: center;
+}
+.info-table td:first-child{
+  min-width: 60px;
+}
+table{
+  border-color:rgb(0,0,0,0.1) !important;
+}
+.social-media-icon{
+display: flex;
+justify-content:space-evenly;
+}
+.social-media-icon a img{
+  height: 30px;
+  width: 30px;
+  margin-top: 50px;
+}
