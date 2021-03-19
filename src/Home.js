@@ -96,56 +96,58 @@ let year = newDate.getFullYear();
             <div className="title">
                 Recommended Songs
             </div>
-            
-            <Link className="full-card" to='/SPB'>
-                <img src={spb} alt="BGM" />
+            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'space-around'}}>
+            <div><Link className="full-card" to='/SPB'>
+                <img src={spb} alt="BGM" className='mt-30'  />
                 <div className='Recommended-album-title'>
-                    <div className="Recommended-title">SP Bala Subramanyam</div>
+                    <div className="Recommended-title">SP Balu</div>
                     <span>Mix:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
                 </div>
-             </Link>
+             </Link></div>
 
-             <Link className="full-card " to='/KV'>
+             <div><Link className="full-card " to='/KV'>
                 <img src={KV} alt="BGM" className='mt-30' />
                 <div className='Recommended-album-title'>
-                    <div className="Recommended-title">KalaThapaswi Shri K.Vishwanath</div>
+                    <div className="Recommended-title">K.Vishwanath</div>
                     <span>Mix:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
                 </div>
-             </Link>     
-
+             </Link></div>     
+            <div>
              <Link className="full-card " to='/Nag'>
                 <img src={nag} alt="BGM" className='mt-30' />
                 <div className='Recommended-album-title'>
-                    <div className="Recommended-title">Nagarjuna Songs</div>
+                    <div className="Recommended-title">Nagarjuna</div>
                     <span>Mix:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
                 </div>
-             </Link> 
+             </Link> </div>
 
-             <Link className="full-card " to='/PK'>
+            <div> <Link className="full-card " to='/PK'>
                 <img src={pavankalyan} alt="BGM" className='mt-30' />
                 <div className='Recommended-album-title'>
-                    <div className="Recommended-title">Pavan Kalyan Songs</div>
+                    <div className="Recommended-title">Pavan Kalyan</div>
                     <span>Mix:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
                 </div>
-             </Link> 
+             </Link></div> 
 
-             <Link className="full-card " to='/Venky'>
+             <div> <Link className="full-card " to='/Venky'>
                 <img src={venky} alt="BGM" className='mt-30' />
                 <div className='Recommended-album-title'>
-                    <div className="Recommended-title">Venkatesh Songs</div>
+                    <div className="Recommended-title">Venkatesh</div>
                     <span>Mix:{`${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`}</span>
                 </div>
-             </Link> 
-             
+             </Link></div> 
 
-            <br />
-
-            <div style={{backgroundColor:"#623bc2",color:'#fff',padding:'10px',borderRadius:'10px',fontSize:'18px',fontWeight:600}}>
+            <div style={{marginTop:'30px'}}> <div className="full-card" >
+            <div className='img-src'>
+            <div style={{backgroundColor:"#623bc2",color:'#fff',borderRadius:'10px',padding:'7.7px',fontSize:'14px',fontWeight:600}}>
             The remaining Heroes, Director's, Singer's songs will be Updated Soon... 
             </div>
+            </div>
+             </div></div> 
+             
+             </div>            
 
             </div>
-
 
             </div>
 
@@ -156,21 +158,21 @@ let year = newDate.getFullYear();
 
                 <div style={{marginLeft:'25px'}}>
                     <Link className='footer-icons' to="/">
-                    <HomeOutlinedIcon style={{fontSize:'30px'}} />
+                    <HomeOutlinedIcon style={{fontSize:'24px'}} />
                     <span>Home</span>
                     </Link>
                 </div>
                 
                 <div >
                     <Link className='footer-icons' to='/About'>
-                    <InfoOutlinedIcon style={{fontSize:'30px'}}/>
+                    <InfoOutlinedIcon style={{fontSize:'24px'}}/>
                     <span>About</span>
                     </Link>
                 </div>
                 
                 <div style={{marginRight:'25px'}}>
                     <Link className='footer-icons' to='/Contact'>
-                    <PersonOutlineOutlinedIcon style={{fontSize:'30px'}} />
+                    <PersonOutlineOutlinedIcon style={{fontSize:'24px'}} />
                     <span>Contact</span>
                     </Link>
                 </div>
