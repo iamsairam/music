@@ -3,10 +3,15 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import './PlayList.css';
-import { Snackbar } from '@material-ui/core';
+import { Button, Snackbar } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import LoopOutlinedIcon from '@material-ui/icons/LoopOutlined';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 
 
   // *********** sneakPeakAlertCode **********
@@ -26,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 function Album({songs}) {
-    const product = songs;
+  const product = songs;
   const [stateVal,setStateVal]=useState(0);
   const tracksLength = product.songdata.length-1;
   // console.log(tracksLength);
@@ -35,8 +40,8 @@ function Album({songs}) {
     if(tracksLength>stateVal){
       setStateVal(prevState=>prevState+1);
     }else{
-      alert(`Only ${tracksLength+1} Songs We Have`);
-      setStateVal(0);
+      handleModalOpen();
+      // setStateVal(0);
     }
   }
   const prevTrack = ()=>{
@@ -45,7 +50,43 @@ function Album({songs}) {
     }
   }
 
-  // ***************** sneakPeakAlertCode ***************
+// ***************** MakeStyles for ModalPopUp ***************** 
+
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '1px solid rgb(0,0,0,0.5)',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    fontSize:'17px',
+    fontWeight:600,
+    borderRadius:'10px'
+  },
+}));
+
+
+const [openModal, setOpenModal] = React.useState(false);
+
+const handleModalOpen = () => {
+  setOpenModal(true);
+};
+
+const handleModalClose = () => {
+  setOpenModal(false);
+  setStateVal(0);
+};
+
+
+
+// ***************** MakeStyles for ModalPopUp ***************** 
+
+
+// ***************** sneakPeakAlertCode ***************
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleClick = (events) => {
@@ -86,27 +127,74 @@ function Album({songs}) {
       <AudioPlayer
       autoPlay={false}
       src={product.songdata[stateVal].songPath}
-                
+         
       showSkipControls={true}
       showJumpControls={false}
       customAdditionalControls={[]}
-
+      
       onClickNext={nextTrack}
       onClickPrevious={prevTrack}
-      
-      onPlay={events=>{handleClick()}}
+      onEnded={e=>{nextTrack()}}
+      onPlay={events=>{console.log("Playing");}}
+      onWaiting={ev=>{handleClick()}}
     // other props here
     />
             </div>
 
-        <Snackbar open={open} autoHideDuration={5500} onClose={handleClose}>
+        <Snackbar open={open} autoHideDuration={2500} onClose={handleClose}>
         <Alert onClose={handleClose} className='Alert-Style'>
-        Please Wait. {product.songdata[stateVal].songName} song may take 5 to 6 seconds of time to load
+        Please Wait. {product.songdata[stateVal].songName} song may take 1 to 5 seconds of time to load
         </Alert>
         </Snackbar>
 
         </div>
         </div>
+
+      <div>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={openModal}
+        onClose={handleModalClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={openModal}>
+          <div className={classes.paper}>
+            {
+              `This album have only ${product.songdata.length} songs`
+            }
+          <div>
+          <div>
+            <div variant='outlined'>
+              <Link className='modal-btn' to='/' style={{textDecoration:'none',color:'#000'}}>
+              <HomeOutlinedIcon />
+                Back To Home
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <div onClick={handleModalClose} className='modal-btn' >
+            <div><LoopOutlinedIcon /> </div>
+            <div>Reload Songs</div>
+            </div>
+          </div>
+
+          </div>
+
+          </div>
+        </Fade>
+      </Modal>
+    </div>
+
+
+
         </div>
     );
 }

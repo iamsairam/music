@@ -1,108 +1,119 @@
-.title-section{
-    margin-top:25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.title-section {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.text-center{
-    text-align:center;
+.text-center {
+  text-align: center;
 }
-.text-right{
-    text-align: right;
+.text-right {
+  text-align: right;
 }
-.mt-35{
-    margin-top: 35px;
+.mt-35 {
+  margin-top: 35px;
 }
-.Img-section{
-    margin-top: 35px;
+.Img-section {
+  margin-top: 35px;
 }
-.Img-section img{
-    border-radius: 25px;
-    height: 300px;
-    width: 250px;
-    box-shadow: 2px 16px 32px 10px rgba( 31, 38, 135, 0.1 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    opacity: 1 !important;
+.Img-section img {
+  border-radius: 25px;
+  height: 300px;
+  width: 250px;
+  box-shadow: 2px 16px 32px 10px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 1 !important;
 }
-.rhap_controls-section{
-    display: block !important;
+.rhap_controls-section {
+  display: block !important;
 }
-.rhap_volume-controls{
-    margin-top: 35px;
-    justify-content: center !important;
+.rhap_volume-controls {
+  margin-top: 35px;
+  justify-content: center !important;
 }
-.rhap_progress-container{
-    margin:none !important;
+.rhap_progress-container {
+  margin: none !important;
 }
-.rhap_container{
-    box-shadow: none !important;
-    padding: 10px 5px !important;
+.rhap_container {
+  box-shadow: none !important;
+  padding: 10px 5px !important;
 }
-.rhap_time{
-color: rgb(0,0,0,0.5)
+.rhap_time {
+  color: rgb(0, 0, 0, 0.5);
 }
-.rhap_progress-section{
-    position: relative;
+.rhap_progress-section {
+  position: relative;
 }
-.rhap_current-time,.rhap_total-time{
-    position: absolute;
-    top: 25px;
+.rhap_current-time,
+.rhap_total-time {
+  position: absolute;
+  top: 25px;
 }
-.rhap_volume-container{
-    flex: 0 1 45%;
+.rhap_volume-container {
+  flex: 0 1 45%;
 }
-.rhap_total-time{
-right: 0;
+.rhap_total-time {
+  right: 0;
 }
-.rhap_main-controls{
-    margin-top: 25px;
-    margin-bottom: 25px;
+.rhap_main-controls {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
-.rhap_play-pause-button,.rhap_main-controls-button {
-    font-size: 50px;
-    width: 100px;
-    height: 50px;
+.rhap_play-pause-button,
+.rhap_main-controls-button {
+  font-size: 50px;
+  width: 100px;
+  height: 50px;
 }
-.rhap_main-controls-button,.rhap_volume-button{
-    color: rgb(0,0,0,0.75);
+.rhap_main-controls-button,
+.rhap_volume-button {
+  color: rgb(0, 0, 0, 0.75);
 }
-.rhap_progress-indicator{
- background-color:#623bc2;
+.rhap_progress-indicator {
+  background-color: #623bc2;
 }
-.rhap_progress-filled{
-   background-color: #623bc2 !important;
+.rhap_progress-filled {
+  background-color: #623bc2 !important;
 }
-.rhap_volume-indicator{
-    background-color: rgb(0,0,0,0.9);
-    z-index: 9; 
+.rhap_volume-indicator {
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 9;
 }
-.rhap_volume-bar{
-    background-color: rgb(0,0,0,0.65);
+.rhap_volume-bar {
+  background-color: rgb(0, 0, 0, 0.65);
 }
 
-.song-name{
-    font-weight: 700;
-    line-height: 2;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-left: 15px !important;
+.song-name {
+  font-weight: 700;
+  line-height: 2;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 15px !important;
 }
-.song-singer{
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1;
-    color: rgb(0,0,0,0.5);
-    margin-left: 15px;
-    margin-bottom: 10px;
+.song-singer {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(0, 0, 0, 0.5);
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
-.MuiAlert-filledSuccess{
-    background-color: rgb(0,0,0,0.85) !important;
+.MuiAlert-filledSuccess {
+  background-color: rgb(0, 0, 0, 0.85) !important;
 }
-.song-name{
-    width: 275px;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
+.song-name {
+  width: 275px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.modal-btn {
+  display: grid;
+  justify-items: center;
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
 }
